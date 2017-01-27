@@ -50,7 +50,7 @@ class StdOutListener( StreamListener ):
 
     def on_data( self, status ):
         global message,first,last,mobile,zipCode
-        #unicode to stringF
+        #unicode to string
         status = str(status)
         try:
             json_acceptable_string = status.replace('\\','')
