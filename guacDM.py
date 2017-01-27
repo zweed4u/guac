@@ -50,7 +50,7 @@ class StdOutListener( StreamListener ):
 
     def on_data( self, status ):
         global message,first,last,mobile,zipCode
-        #unicode to string
+        #unicode to stringF
         status = str(status)
         try:
             json_acceptable_string = status.replace('\\','')
@@ -130,7 +130,7 @@ class StdOutListener( StreamListener ):
                     #message is not in designed format
                     #Implement Message back with example
                     if flag==0:
-                        api.send_direct_message(user=str(status[u'direct_message'][u'sender_screen_name']),text='Message ill formed! Send as one line! eg. John Doe 18008675309 90210 user@domain.com')
+                        api.send_direct_message(user=str(status[u'direct_message'][u'sender_screen_name']),text='Message ill formed! Send as one line! eg. John Doe 18008675309 90210')
                     print 'Message ill formed'
             else:
                 #not direct message flow
